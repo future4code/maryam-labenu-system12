@@ -30,46 +30,45 @@ export class User {
 }
 
 export class Estudante extends User {
-    hobbies?:    Array<string>;
+    hobbie_id?:    Array<string>;
 
     constructor(
-        id:         string,
-        nome:       string,
-        email:      string,
-        data_nasc:  string,
-        turma_id:   string,
-        hobbies?:   Array<string>,
+        id:             string,
+        nome:           string,
+        email:          string,
+        data_nasc:      string,
+        turma_id:       string,
+        hobbie_id?:    Array<string>,
     ){
         super(id,nome,email,data_nasc,turma_id)
-        this.hobbies = hobbies
+        this.hobbie_id = hobbie_id
     }
 }
 
 
 export class Docente extends User{
-    especialidades?: Array<Especialidade>
+    especialidades_id?:        Array<Especialidade>
 
     constructor(
-        id:                 string,
-        nome:               string,
-        email:              string,
-        data_nasc:          string,
-        turma_id:           string,
-        especialidades?:    Array<Especialidade>,
+        id:                     string,
+        nome:                   string,
+        email:                  string,
+        data_nasc:              string,
+        turma_id:               string,
+        especialidades_id:     Array<Especialidade>,
     ){
         super(id,nome,email,data_nasc,turma_id)
-        this.especialidades = especialidades
+        this.especialidades_id = especialidades_id
     }
-
 }
 
 
 export class Turma {
     id: string;
     nome: string;
-    docentes: Array<string>;
-    estudantes: Array<string>;
-    modulo: number;
+    docentes?: Array<string>;
+    estudantes?: Array<string>;
+    modulo?: number;
 
     constructor(
         id: string,
